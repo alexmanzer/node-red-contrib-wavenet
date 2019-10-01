@@ -191,8 +191,8 @@ const getAudioFile = async (txt, data) => {
 			},
 			'audioConfig': {
 				"sampleRateHertz": 24000,
-				"speakingRate": "0.90",
-				'audioEncoding': 'OGG'
+				"speakingRate": "1.0",
+				'audioEncoding': 'OGG_OPUS'
 			}
 		},
 		method: 'POST'
