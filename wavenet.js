@@ -95,6 +95,16 @@ let voice_options = {
 		language: 'en-US',
 		gender: 'female',
 		wav: 'en-US-Wavenet-F'
+	},
+	germanFemale: {
+		language: 'de-DE',
+		gender: 'female',
+		wav: 'de-DE-Wavenet-A'
+	},
+	germanMale: {
+		language: 'de-DE',
+		gender: 'male',
+		wav: 'de-DE-Wavenet-B'
 	}
 }
 
@@ -112,7 +122,9 @@ let voice_names = [
 	"joanna",
 	"Ivy",
 	"kimberly",
-	"salli"
+	"salli",
+	"germanFemale",
+	"germanMale"
 ]
 
 const makeHttpCall = async (options) => {
@@ -178,9 +190,9 @@ const getAudioFile = async (txt, data) => {
 				'ssmlGender': data.gender
 			},
 			'audioConfig': {
-				// "sampleRateHertz": 48000,
+				"sampleRateHertz": 24000,
 				"speakingRate": "0.90",
-				'audioEncoding': 'MP3'
+				'audioEncoding': 'OGG'
 			}
 		},
 		method: 'POST'
